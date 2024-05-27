@@ -69,7 +69,8 @@ class LogProcessor:
             if self.fcu_start_ts is None:
                 return
             if self.fcu_no_attr_start_ts is not None:
-                raise Exception("fcu_no_attr_start_ts is not None")
+                print(("fcu_no_attr_start_ts is not None"))
+                # raise Exception("fcu_no_attr_start_ts is not None")
             if log['state']['headBlockHash'] != self.block_hash:
                 raise Exception('block hash mismatch')
             self.fcu_no_attr_start_ts = ts

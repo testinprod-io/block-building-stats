@@ -13,7 +13,8 @@ AWS [i3en.3xlarge](https://aws.amazon.com/ko/ec2/instance-types/i3en/), 1 node p
   - Based on [op-node/v1.7.5](https://github.com/ethereum-optimism/optimism/releases/tag/op-node%2Fv1.7.5)
   - Only changed engine API timing logs to Debug level.([0c820a9](https://github.com/ethereum-optimism/optimism/commit/0c820a9c0bfa3f33bf2cff8f4712b48409fce8bd))
 - op-geth: [v1.101315.0](https://github.com/ethereum-optimism/op-geth/releases/tag/v1.101315.0)
-- op-reth: [v0.2.0-beta.6](https://github.com/paradigmxyz/reth/releases/tag/v0.2.0-beta.6)
+- op-reth: [v0.2.0-beta.7](https://github.com/paradigmxyz/reth/releases/tag/v0.2.0-beta.7)
+  - Built with `make maxperf-op`
 
 ### Node Configs
 - op-node
@@ -56,6 +57,7 @@ AWS [i3en.3xlarge](https://aws.amazon.com/ko/ec2/instance-types/i3en/), 1 node p
     --gcmode=$GCMODE \
     --verbosity=4 \
     --nodiscover \
+    --cache=8192 \
     --log.format=json \
     --log.file=/mnt/nvme/logs/op-geth.log
   ```
