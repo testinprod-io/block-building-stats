@@ -62,6 +62,7 @@ AWS [i3en.3xlarge](https://aws.amazon.com/ko/ec2/instance-types/i3en/), 1 node p
     --log.file=/mnt/nvme/logs/op-geth.log
   ```
   - `GCMODE` is `archive` for archive nodes and `full` for full nodes
+  - Used PebbleDB as DB engine.
 
 - op-reth
   - command
